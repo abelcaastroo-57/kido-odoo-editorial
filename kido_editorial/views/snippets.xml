@@ -1,0 +1,13 @@
+<odoo>
+  <template id="s_kido_editorial" name="Kido editorial">
+    <section class="section" data-name="Kido editorial">
+      <h2>Un espacio para escuchar tu piel.</h2>
+      <p>Edita este contenido desde Odoo.</p>
+    </section>
+  </template>
+  <template id="snippets" inherit_id="website.snippets" name="Bloques Kido">
+    <xpath expr="//*[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+      <t t-snippet="kido_editorial.s_kido_editorial" string="Kido editorial"/>
+    </xpath>
+  </template>
+</odoo>

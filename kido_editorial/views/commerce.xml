@@ -1,0 +1,50 @@
+<odoo>
+  <template id="product_page" inherit_id="website_sale.product" primary="True" name="Kido — ficha nativa">
+    <xpath expr="//t[@t-call=&quot;website.layout&quot;]" position="inside">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+    </xpath>
+    <xpath expr="//div[@id=&quot;wrap&quot;]" position="attributes">
+      <attribute name="class" add="kido-site product-page" separator=" "/>
+    </xpath>
+    <xpath expr="//div[@id=&quot;wrap&quot;]/*[1]" position="before">
+      <t t-call="kido_editorial.assets"/>
+      <t t-call="kido_editorial.header"/>
+    </xpath>
+    <xpath expr="//div[@id=&quot;wrap&quot;]" position="inside">
+      <t t-call="kido_editorial.footer"/>
+    </xpath>
+    <xpath expr="//div[@id=&quot;product_details&quot;]" position="inside">
+      <div class="kido-product-trust">
+        <span>Producto original</span>
+        <span>Recogida en tienda</span>
+        <span>Precio y entrega en tu cesta</span>
+      </div>
+    </xpath>
+  </template>
+  <template id="header" name="Kido header"><div class="notice"><span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span><span>Cosmética coreana auténtica · Tienda en Tenerife</span><a href="#club">Club Kido</a></div>
+<header><a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio de Kido Essence"><img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/></a><nav><a href="/shop" class="nav-shop">Tienda</a><a href="/shop?collection=novedades">Novedades</a><a href="/shop">Por necesidad</a><a href="/kido/inicio#rutina">Rutinas</a><a href="/kido/inicio#sets">Sets</a><a href="/kido/inicio#ingredientes">Ingredientes</a><a href="/kido/inicio#historia">Sobre Kido</a></nav><div class="tools"><a href="/shop" class="search">Buscar</a><a href="/kido/inicio?quiz=1" class="quiz-link">Mi rutina</a><a href="/shop/cart" class="cart">Cesta <b>0</b></a><a href="/shop" class="mobile-menu">Menú</a></div></header>
+</template>
+  <template id="footer" name="Kido footer"><footer class="site-footer"><div class="footer-brand"><img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/><p>Belleza coreana real, elegida con calma en Tenerife.</p></div><div><h4>Comprar</h4><a href="/shop?collection=novedades">Novedades</a><a href="/shop">Por necesidad</a><a href="/kido/rutinas">Rutinas</a><a href="/kido/marcas">Marcas</a></div><div><h4>Descubrir</h4><a href="/kido/sobre-kido">Sobre Kido</a><a href="/kido/guias">Guías</a><a href="/kido/contacto">Contacto</a><a href="/kido/envios">Envíos y devoluciones</a><button class="footer-link" data-cookie-settings="">Preferencias de cookies</button></div><div><h4>Información</h4><a href="/kido/aviso-legal">Aviso legal</a><a href="/kido/privacidad">Privacidad</a><a href="/kido/cookies">Cookies</a><a href="/kido/condiciones">Condiciones de compra</a></div><div><h4>Visítanos</h4><p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p><p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p></div></footer>
+</template>
+  <template id="native_checkout" inherit_id="website_sale.checkout_layout" name="Kido — checkout nativo">
+    <xpath expr="//t[@t-call=&quot;website.layout&quot;]" position="inside">
+      <t t-if="website.kido_enabled" t-set="no_header" t-value="True"/>
+      <t t-if="website.kido_enabled" t-set="no_footer" t-value="True"/>
+    </xpath>
+    <xpath expr="//div[@id=&quot;wrap&quot;]" position="attributes">
+      <attribute name="t-att-class">'kido-site checkout-page' if website.kido_enabled else ''</attribute>
+    </xpath>
+    <xpath expr="//div[@id=&quot;wrap&quot;]" position="inside">
+      <t t-if="website.kido_enabled">
+        <t t-call="kido_editorial.footer"/>
+      </t>
+    </xpath>
+    <xpath expr="//div[@id=&quot;wrap&quot;]/*[1]" position="before">
+      <t t-if="website.kido_enabled">
+        <t t-call="kido_editorial.assets"/>
+        <t t-call="kido_editorial.header"/>
+      </t>
+    </xpath>
+  </template>
+</odoo>

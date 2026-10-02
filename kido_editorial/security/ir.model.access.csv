@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kido_item_admin,Selección Kido administrador,model_kido_editorial_item,base.group_system,1,1,1,1
+access_kido_item_editor,Selección Kido editor,model_kido_editorial_item,website.group_website_designer,1,1,1,0
+access_kido_consent_admin,Consentimiento Kido administrador,model_kido_club_consent,base.group_system,1,1,1,1
+access_kido_question_editor,Preguntas Kido editor,model_kido_quiz_question,website.group_website_designer,1,1,1,0
+access_kido_option_editor,Respuestas Kido editor,model_kido_quiz_option,website.group_website_designer,1,1,1,0
+access_kido_weight_editor,Reglas Kido editor,model_kido_quiz_weight,website.group_website_designer,1,1,1,0

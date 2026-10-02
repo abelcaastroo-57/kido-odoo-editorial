@@ -1,0 +1,7 @@
+(()=>{
+const P=KIDO_PRODUCTS,euro=KidoNative.euro,steps=['limpiar','tratar','hidratar','proteger'];
+const defs={calma:{title:'Barrera & Calma',desc:'Una base suave para reducir estímulos y recuperar confort.'},hidratacion:{title:'Confort & Hidratación',desc:'Capas sencillas para mantener agua y flexibilidad.'},luminosidad:{title:'Luz & Tono',desc:'Antioxidantes, hidratación y protección diaria.'},firmeza:{title:'Firmeza gradual',desc:'Tratamientos progresivos acompañados de hidratación.'}};
+function products(need){return steps.map(s=>P.find(p=>p.step===s&&p.need===need)||P.find(p=>p.step===s&&p.need==='calma')||P.find(p=>p.step===s)).filter(Boolean)}
+document.querySelector('#routine-library').innerHTML=Object.entries(defs).map(([need,d],i)=>{const ps=products(need),total=ps.reduce((s,p)=>s+p.price,0);return`<article class="routine-set"><header><span>0${i+1}</span><div><p class="eyebrow">Rutina editable</p><h2>${d.title}</h2><p>${d.desc}</p></div><strong>${euro(total)}</strong></header><div>${ps.map((p,n)=>`<a href="${p.url}"><span>${n+1}</span><i class="packshot ${p.step}"></i><small>${p.step}</small><strong>${p.name}</strong><em>${euro(p.price)}</em></a>`).join('')}</div><footer><small>${ps.length} productos · precio y entrega se confirman en tu cesta</small><button class="pink" data-add-routine="${need}">Añadir rutina completa</button></footer></article>`}).join('');
+document.addEventListener('click',e=>{const b=e.target.closest('[data-add-routine]');if(!b)return;KidoNative.add(products(b.dataset.addRoutine),'Rutina añadida')});
+})();

@@ -1,0 +1,1133 @@
+<odoo>
+  <template id="assets" name="Kido assets">
+    <link rel="stylesheet" href="/kido_editorial/static/src/css/fonts.css"/>
+    <link rel="stylesheet" href="/kido_editorial/static/src/css/editorial.css"/>
+    <link rel="stylesheet" href="/kido_editorial/static/src/css/native.css"/>
+    <script type="application/json" id="kido-catalog-data">
+      <t t-out="website._kido_catalog_json()"/>
+    </script>
+    <script src="/kido_editorial/static/src/js/bootstrap.js"/>
+    <script src="/kido_editorial/static/src/js/native.js"/>
+    <script src="/kido_editorial/static/src/js/consent.js"/>
+  </template>
+  <template id="page_404_view" name="Kido — page_404">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site not-found-page" data-kido-page="page_404">
+        <t t-call="kido_editorial.assets"/>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span>
+          <span>Cosmética coreana auténtica · Tienda en Tenerife</span>
+          <a href="/kido/inicio#club">Club Kido</a>
+        </div>
+        <header>
+          <a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/contacto">Contacto</a>
+          </nav>
+          <div class="tools">
+            <a href="/shop">Buscar</a>
+            <a href="/shop/cart">Cesta <b data-cart-count="">0</b></a>
+          </div>
+        </header>
+        <main id="contenido" class="not-found oe_structure">
+          <span>404</span>
+          <p class="eyebrow">Esta página no está aquí</p>
+          <h1>Volvamos a escuchar tu piel.</h1>
+          <p>El enlace puede haber cambiado o el producto ya no está disponible.</p>
+          <div>
+            <a class="pink" href="/shop">Ir a la tienda</a>
+            <a class="outline-btn" href="/kido/inicio">Volver al inicio</a>
+          </div>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop?collection=novedades">Novedades</a>
+            <a href="/shop">Por necesidad</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+          </div>
+          <div>
+            <h4>Descubrir</h4>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/contacto">Contacto</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+            <p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_404" model="website.page">
+      <field name="name">404</field>
+      <field name="url">/kido/no-encontrado</field>
+      <field name="view_id" ref="page_404_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_about_view" name="Kido — page_about">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site about-page" data-kido-page="page_about">
+        <t t-call="kido_editorial.assets"/>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span>
+          <span>Cosmética coreana auténtica · Tienda en Tenerife</span>
+          <a href="/kido/inicio#club">Club Kido</a>
+        </div>
+        <header>
+          <a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/contacto">Contacto</a>
+          </nav>
+          <div class="tools">
+            <a href="/shop">Buscar</a>
+            <a href="/shop/cart">Cesta <b data-cart-count="">0</b></a>
+          </div>
+        </header>
+        <main id="contenido" class="oe_structure">
+          <section class="subpage-hero about-hero" data-snippet="s_kido_editorial" data-name="Kido subpage-hero">
+            <div>
+              <p class="eyebrow">Kido Essence · Tenerife</p>
+              <h1>Elegir con calma<br/>también es cuidarse.</h1>
+              <p>Kido nace para hacer más comprensible la cosmética coreana: menos ruido, mejores decisiones y una tienda donde preguntar sin prisa.</p>
+            </div>
+            <img src="/kido_editorial/static/src/img/37562e1655da.webp" alt="Interior de Kido Essence"/>
+          </section>
+          <section class="about-story section" data-snippet="s_kido_editorial" data-name="Kido about-story">
+            <div>
+              <p class="eyebrow">Nuestro criterio</p>
+              <h2>Cada producto tiene una razón para estar aquí.</h2>
+            </div>
+            <div>
+              <p>Seleccionamos productos originales que puedan explicarse con claridad: para quién son, qué aportan y en qué paso encajan. La tienda física y la web comparten la misma intención.</p>
+              <dl>
+                <div>
+                  <dt>01</dt>
+                  <dd>
+                    <strong>Originalidad</strong>
+                    <span>Proveedores de confianza y una selección trazable.</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>02</dt>
+                  <dd>
+                    <strong>Utilidad</strong>
+                    <span>Fórmulas que tienen un lugar claro en rutinas reales.</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>03</dt>
+                  <dd>
+                    <strong>Cercanía</strong>
+                    <span>Información sencilla y acompañamiento cuando lo necesitas.</span>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </section>
+          <section class="about-visit" data-snippet="s_kido_editorial" data-name="Kido about-visit">
+            <img src="/kido_editorial/static/src/img/fa0838823ad8.webp" alt="Fachada de Kido Essence"/>
+            <div>
+              <p class="eyebrow">Ven a conocernos</p>
+              <h2>Una tienda para probar, preguntar y elegir.</h2>
+              <p>C. Pérez Galdós, 11 · Santa Cruz de Tenerife</p>
+              <p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p>
+              <a class="pink" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Perez+Galdos+11+Santa+Cruz+de+Tenerife" target="_blank" rel="noopener noreferrer">Cómo llegar →</a>
+            </div>
+          </section>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop?collection=novedades">Novedades</a>
+            <a href="/shop">Por necesidad</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+          </div>
+          <div>
+            <h4>Descubrir</h4>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/contacto">Contacto</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+            <p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_about" model="website.page">
+      <field name="name">about</field>
+      <field name="url">/kido/sobre-kido</field>
+      <field name="view_id" ref="page_about_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_brands_view" name="Kido — page_brands">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site brands-page" data-kido-page="page_brands">
+        <t t-call="kido_editorial.assets"/>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span>
+          <span>Cosmética coreana auténtica · Tienda en Tenerife</span>
+          <a href="/kido/inicio#club">Club Kido</a>
+        </div>
+        <header>
+          <a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/contacto">Contacto</a>
+          </nav>
+          <div class="tools">
+            <a href="/shop">Buscar</a>
+            <a href="/shop/cart">Cesta <b data-cart-count="">0</b></a>
+          </div>
+        </header>
+        <main id="contenido" class="oe_structure">
+          <section class="subpage-hero simple" data-snippet="s_kido_editorial" data-name="Kido subpage-hero">
+            <div>
+              <p class="eyebrow">Selección original</p>
+              <h1>Marcas que tienen<br/>algo que aportar.</h1>
+              <p>Descubre la selección disponible y entra directamente en sus productos.</p>
+            </div>
+          </section>
+          <section class="brand-directory section" data-snippet="s_kido_editorial" data-name="Kido brand-directory">
+            <div id="brand-directory"/>
+          </section>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop?collection=novedades">Novedades</a>
+            <a href="/shop">Por necesidad</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+          </div>
+          <div>
+            <h4>Descubrir</h4>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/contacto">Contacto</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+            <p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_brands" model="website.page">
+      <field name="name">brands</field>
+      <field name="url">/kido/marcas</field>
+      <field name="view_id" ref="page_brands_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_contact_view" name="Kido — page_contact">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site contact-page" data-kido-page="page_contact">
+        <t t-call="kido_editorial.assets"/>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span>
+          <span>Cosmética coreana auténtica · Tienda en Tenerife</span>
+          <a href="/kido/inicio#club">Club Kido</a>
+        </div>
+        <header>
+          <a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/contacto">Contacto</a>
+          </nav>
+          <div class="tools">
+            <a href="/shop">Buscar</a>
+            <a href="/shop/cart">Cesta <b data-cart-count="">0</b></a>
+          </div>
+        </header>
+        <main id="contenido" class="contact-main oe_structure">
+          <section data-snippet="s_kido_editorial" data-name="Kido contenido">
+            <p class="eyebrow">Estamos cerca</p>
+            <h1>Cuéntanos<br/>qué necesitas.</h1>
+            <p>Para preguntas sobre pedidos, productos o tu visita a tienda. No envíes información médica mediante este formulario.</p>
+            <div class="contact-facts">
+              <p><small>Tienda</small>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+              <p><small>Horario</small>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p>
+              <p>Puedes dejarnos tu consulta en el formulario.</p>
+            </div>
+          </section>
+          <form id="contact-form" class="contact-form" action="/kido/contact" method="post" data-kido-form="1">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <input type="text" name="company_fax" tabindex="-1" autocomplete="off" class="kido-honeypot" aria-hidden="true"/>
+            <label>Nombre<input name="name" required="" autocomplete="name"/></label>
+            <label>Correo electrónico<input name="email" type="email" required="" autocomplete="email"/></label>
+            <label>Motivo<select name="subject"><option>Pregunta sobre un producto</option><option>Estado de un pedido</option><option>Recogida en tienda</option><option>Devolución</option><option>Otra consulta</option></select></label>
+            <label>Mensaje<textarea name="message" rows="6" required=""/></label>
+            <label class="terms-check"><input type="checkbox" required="" name="consent" value="yes"/>He leído la <a href="/kido/privacidad" target="_blank" rel="noopener noreferrer">política de privacidad</a>.</label>
+            <button class="pink">Enviar consulta →</button>
+            <small>Tu consulta llegará al equipo de Kido.</small>
+          </form>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop?collection=novedades">Novedades</a>
+            <a href="/shop">Por necesidad</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+          </div>
+          <div>
+            <h4>Descubrir</h4>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/contacto">Contacto</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+            <p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_contact" model="website.page">
+      <field name="name">contact</field>
+      <field name="url">/kido/contacto</field>
+      <field name="view_id" ref="page_contact_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_cookies_view" name="Kido — page_cookies">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site legal-page" data-kido-page="page_cookies">
+        <t t-call="kido_editorial.assets"/>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Información clara para comprar con tranquilidad</span>
+          <span>Kido Essence · Tenerife</span>
+          <a href="/shop">Volver a la tienda</a>
+        </div>
+        <header class="legal-header">
+          <a class="logo" href="/kido/inicio#inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </nav>
+          <div class="tools">
+            <a href="/kido/inicio">Inicio</a>
+          </div>
+        </header>
+        <main class="legal-main oe_structure">
+          <aside class="legal-nav">
+            <p class="eyebrow">Información</p>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </aside>
+          <article class="legal-content">
+            <p class="updated">Última actualización: 30 de septiembre de 2026</p>
+            <h1>Política de cookies</h1>
+            <p>Esta página explica el almacenamiento utilizado en el sitio y permite modificar el consentimiento en cualquier momento.</p>
+            <div class="pending" t-if="request.env.user.has_group(&quot;website.group_website_designer&quot;)"><strong>Datos pendientes antes de publicar:</strong> razón social o nombre completo del titular, NIF/CIF, domicilio fiscal, correo de privacidad y datos registrales si corresponden. El diseño está terminado; estos datos deben sustituirse al conectar la web definitiva.</div>
+            <h2>1. Qué utilizamos</h2>
+            <h3>Necesarias</h3>
+            <p>Permiten recordar la cesta, las preferencias de privacidad y funciones básicas. No requieren consentimiento cuando son imprescindibles para el servicio solicitado.</p>
+            <h3>Analíticas</h3>
+            <p>Solo se activarán con permiso. Servirán para conocer de forma agregada qué contenidos resultan útiles. Proveedor, nombre, duración y dominio se documentarán al conectar la herramienta real.</p>
+            <h3>Personalización y marketing</h3>
+            <p>Solo se activarán con permiso y cuando se conecten las herramientas correspondientes. La lista definitiva se mostrará aquí antes de publicar.</p>
+            <h2>2. Control del consentimiento</h2>
+            <p>El panel ofrece opciones visibles para aceptar, rechazar o configurar por finalidad. Las opciones no necesarias permanecen desactivadas hasta la elección del usuario.</p>
+            <p>
+              <button class="pink" data-cookie-settings="">Abrir preferencias de cookies</button>
+            </p>
+            <h2>3. Retirada</h2>
+            <p>Puedes cambiar o retirar el consentimiento en cualquier momento desde el enlace “Preferencias de cookies” del pie de página.</p>
+          </article>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+          </div>
+          <div>
+            <h4>Ayuda</h4>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_cookies" model="website.page">
+      <field name="name">cookies</field>
+      <field name="url">/kido/cookies</field>
+      <field name="view_id" ref="page_cookies_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_home_view" name="Kido — page_home">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site " data-kido-page="page_home"><t t-call="kido_editorial.assets"/><div class="notice"><span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span><span>Cosmética coreana auténtica · Tienda en Tenerife</span><a href="#club">Club Kido</a></div>
+<header><a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio de Kido Essence"><img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/></a><nav><button class="nav-shop" data-shop-menu="">Tienda</button><a href="/shop?collection=novedades">Novedades</a><a href="/shop">Por necesidad</a><a href="#rutina">Rutinas</a><a href="#sets">Sets</a><a href="#ingredientes">Ingredientes</a><a href="#historia">Sobre Kido</a></nav><div class="tools"><button class="search" data-open-search="">Buscar</button><button class="quiz-link" data-open-quiz="">Mi rutina</button><button class="cart" data-open-cart="">Cesta <b>0</b></button><button class="mobile-menu" data-shop-menu="" aria-label="Abrir menú">☰</button></div></header>
+<div class="mega-menu" id="shop-menu" aria-hidden="true"><div class="mega-intro"><p class="eyebrow">Comprar con criterio</p><h2>Empieza por lo que ya sabes de tu piel.</h2><button class="pink" data-open-quiz="">Descubrir mi rutina</button></div><div><h3>Por producto</h3><a href="/shop?collection=favoritos">Más vendidos</a><a href="/shop?collection=novedades">Nuevas llegadas</a><a href="/shop">Todos los productos</a><a href="#sets">Packs y sets</a></div><div><h3>Por paso</h3><a href="/shop?step=limpiar">Limpieza</a><a href="/shop?step=tratar">Tratamiento</a><a href="/shop?step=hidratar">Hidratación</a><a href="/shop?step=proteger">Protección solar</a></div><div><h3>Por necesidad</h3><a href="/shop?need=calma">Sensibilidad y rojeces</a><a href="/shop?need=hidratacion">Deshidratación</a><a href="/shop?need=poros">Brotes y poros</a><a href="/shop?need=luminosidad">Manchas y tono</a></div><div><h3>Ingredientes clave</h3><a href="/shop?ingredient=centella">Centella asiática</a><a href="/shop?ingredient=vitamina%20c">Vitamina C</a><a href="/shop?ingredient=peptidos">Péptidos</a><a href="/shop?ingredient=arroz">Arroz</a></div></div>
+<main id="inicio" class="oe_structure">
+<section class="hero" data-snippet="s_kido_editorial" data-name="Kido hero"><img class="hero-bg" src="/kido_editorial/static/src/img/9672e39b614b.webp" alt="Selección editorial de cosmética coreana en Tenerife"/><div class="hero-shade"/><div class="hero-content"><p class="eyebrow">Cosmética coreana seleccionada en Tenerife</p><h1>Tu piel habla.<br/>Aprende a escucharla.</h1><p class="lead">Rutinas sencillas, productos originales y una selección con criterio para cuidar tu piel sin comprar a ciegas.</p><div class="skin-picker"><strong>¿Qué necesita tu piel hoy?</strong><div><a href="/shop?need=hidratacion">Hidratación</a><a href="/shop?need=luminosidad">Luminosidad</a><a href="/shop?need=firmeza">Antiedad</a><a href="/shop?need=calma">Calma</a></div><footer><button class="pink" data-open-quiz="">Crear mi rutina →</button><a href="/shop">Ver tienda →</a></footer></div><ul class="trust"><li>Productos originales</li><li>Envío en Canarias</li><li>Asesoramiento cercano</li></ul></div></section>
+<section class="brand-ribbon" aria-label="Marcas originales disponibles en Kido" data-snippet="s_kido_editorial" data-name="Kido brand-ribbon"><span>Selección original de</span><a href="/shop?brand=COSRX" aria-label="Comprar COSRX"><img src="/kido_editorial/static/src/img/536eebf8dd1c.webp" alt="COSRX"/></a><a href="/shop?brand=MEDIPEEL" aria-label="Comprar MEDIPEEL"><img src="/kido_editorial/static/src/img/14bbf53ad1fe.webp" alt="MEDIPEEL"/></a><a href="/shop?brand=ANUA" aria-label="Comprar Anua"><img src="/kido_editorial/static/src/img/2cae990a3d3a.webp" alt="Anua"/></a><a href="/shop?brand=MEDICUBE" aria-label="Comprar Medicube"><img src="/kido_editorial/static/src/img/71f771c04207.svg" alt="Medicube"/></a><a href="/shop?brand=SKIN1004" aria-label="Comprar SKIN1004"><img src="/kido_editorial/static/src/img/17dab768ef0c.webp" alt="SKIN1004"/></a><a href="/shop?brand=PURITO" aria-label="Comprar Purito Seoul"><img src="/kido_editorial/static/src/img/784f1dc87f46.svg" alt="Purito Seoul"/></a><a href="/shop?brand=BIODANCE" aria-label="Comprar Biodance"><img src="/kido_editorial/static/src/img/580eb4df3687.svg" alt="Biodance"/></a><a href="/shop?brand=TOCOBO" aria-label="Comprar TOCOBO"><img src="/kido_editorial/static/src/img/e2dd116da4e2.svg" alt="TOCOBO"/></a></section>
+<section class="shop-gateway" data-snippet="s_kido_editorial" data-name="Kido shop-gateway"><div><p class="eyebrow">Una tienda que te orienta</p><h2>¿Cómo quieres empezar?</h2></div><a href="/shop"><span>01</span><strong>Por producto</strong><small>Explora todo el catálogo</small></a><a href="#sets"><span>02</span><strong>Por rutina</strong><small>Sets completos y editables</small></a><a href="/shop?need=calma"><span>03</span><strong>Por tu piel</strong><small>Necesidad, paso e ingrediente</small></a><button data-open-quiz=""><span>04</span><strong>Con diagnóstico</strong><small>Déjanos ordenar las opciones</small></button></section>
+<section class="products section" id="favoritos" data-snippet="s_kido_editorial" data-name="Kido favoritos"><div class="section-head"><div><p class="eyebrow">Selección de la tienda</p><h2>Los favoritos de Kido</h2></div><p>Fórmulas que nuestra comunidad vuelve a elegir. Datos y precios reales del catálogo.</p></div><div class="product-stage"><img src="/kido_editorial/static/src/img/47f3e29d0e4e.webp" alt="Escenario editorial para productos"/><div class="product-grid" id="featured-products"/></div><a class="underlink" href="/shop?collection=favoritos">Ver todos los productos →</a></section>
+<section class="needs section" id="necesidades" data-snippet="s_kido_editorial" data-name="Kido necesidades"><div class="section-head"><div><p class="eyebrow">Empieza por lo que notas</p><h2>Elige por necesidad</h2></div><p>No necesitas conocer ingredientes. Cuéntanos qué quieres cuidar y entra directamente en una selección más clara.</p></div><div class="need-grid"><a href="/shop?need=hidratacion" style="--img:url(/kido_editorial/static/src/img/c92c4d123c28.webp)"><span>01</span><h3>Hidratación</h3><p>Confort, elasticidad y una piel más jugosa.</p></a><a href="/shop?need=luminosidad" style="--img:url(/kido_editorial/static/src/img/354f8686716d.webp)"><span>02</span><h3>Luminosidad</h3><p>Tono uniforme y aspecto descansado.</p></a><a href="/shop?need=firmeza" style="--img:url(/kido_editorial/static/src/img/dce4dfd1c20a.webp)"><span>03</span><h3>Firmeza</h3><p>Textura, elasticidad y cuidado preventivo.</p></a><a href="/shop?need=calma" style="--img:url(/kido_editorial/static/src/img/f9cd9e43a8e3.webp)"><span>04</span><h3>Calma</h3><p>Barrera protegida y menos sensación de tirantez.</p></a></div></section>
+<section class="routine section" id="rutina" data-snippet="s_kido_editorial" data-name="Kido rutina"><div class="routine-copy"><p class="eyebrow">Tu rutina, paso a paso</p><h2>Cuatro decisiones.<br/>Una rutina con sentido.</h2><p>Todos los productos siguen siendo independientes: puedes cambiar un paso, eliminarlo o añadir la rutina completa a tu cesta.</p><button class="pink" data-open-quiz="">Personalizar mi rutina</button></div><div class="routine-rail" id="routine-products"/><div class="routine-total"><span>Rutina esencial · 4 productos</span><strong id="routine-price"/><button class="pink" data-add-routine="">Añadir rutina completa</button></div></section>
+<section class="bundle-studio section" id="sets" data-snippet="s_kido_editorial" data-name="Kido sets"><div class="section-head"><div><p class="eyebrow">Sets Kido · editables</p><h2>Una rutina completa.<br/>Sin comprar a ciegas.</h2></div><p>Empieza con una combinación coherente y cambia cualquier paso. Los precios proceden del catálogo real y los sets superiores a 70 € tienen envío gratuito en Canarias.</p></div><div class="bundle-tabs" role="tablist"><button class="active" data-bundle="centella">Ritual Centella</button><button data-bundle="glow">Rutina Glow</button><button data-bundle="calm">Barrera &amp; Calma</button><button data-bundle="firm">Firmeza gradual</button></div><div class="bundle-stage" id="bundle-stage"/></section>
+<section class="commerce-perks" data-snippet="s_kido_editorial" data-name="Kido commerce-perks"><article><span>01</span><div><strong>Envío gratuito</strong><small>Desde 70 € a todas las Islas Canarias</small></div></article><article><span>02</span><div><strong>Recogida en Kido</strong><small>Prepara tu cesta y recógela en tienda</small></div></article><article><span>03</span><div><strong>Originales y certificados</strong><small>Selección auténtica de distribuidores oficiales</small></div></article><article><span>04</span><div><strong>Una rutina editable</strong><small>Cambia o elimina cualquier paso antes de comprar</small></div></article></section>
+<section class="ingredients" id="ingredientes" data-snippet="s_kido_editorial" data-name="Kido ingredientes"><div class="ingredient-copy"><p class="eyebrow">Fórmulas que entendemos</p><h2>Ingredientes con propósito.</h2><p>Aprende qué aporta cada ingrediente y encuentra los productos donde tiene un papel protagonista.</p><a href="/shop">Ver todos los ingredientes →</a></div><a class="ingredient centella" href="/shop?ingredient=centella"><div><h3>Centella Asiática</h3><p>Calma y refuerza la barrera.</p></div></a><a class="ingredient oat" href="/shop?ingredient=arroz"><div><h3>Arroz y avena</h3><p>Nutren y devuelven confort.</p></div></a><a class="ingredient bamboo" href="/shop?ingredient=bambu"><div><h3>Bambú</h3><p>Hidratación y antioxidantes.</p></div></a></section>
+<section class="kido-criteria" id="historia" data-snippet="s_kido_editorial" data-name="Kido historia"><div class="criteria-visual"><img class="criteria-main" src="/kido_editorial/static/src/img/37562e1655da.webp" alt="Selección de productos en el escaparate de Kido Essence"/><img class="criteria-detail" src="/kido_editorial/static/src/img/857cdc8936f4.webp" alt="Detalle botánico del interior de Kido Essence"/><span>Elegido en Tenerife</span></div><div class="criteria-copy"><p class="eyebrow">El criterio Kido</p><h2>Menos ruido.<br/>Mejores elecciones.</h2><p class="criteria-lead">Cada producto tiene una razón para estar aquí: una fórmula comprensible, un lugar claro en la rutina y una forma sencilla de usarlo.</p><dl><div><dt>01</dt><dd><strong>Original y trazable</strong><span>Trabajamos con selección auténtica y proveedores de confianza.</span></dd></div><div><dt>02</dt><dd><strong>Útil en una rutina real</strong><span>Explicamos para quién es, qué aporta y en qué paso encaja.</span></dd></div><div><dt>03</dt><dd><strong>Elegido con calma</strong><span>Priorizamos calidad, experiencia y sentido antes que cantidad.</span></dd></div></dl><a class="pink" href="/shop">Explorar la selección →</a></div></section>
+<section class="community" id="comunidad" t-if="website.kido_reviews_verified or request.env.user.has_group(&quot;website.group_website_designer&quot;)" data-snippet="s_kido_editorial" data-name="Kido comunidad"><p class="pending" t-if="not website.kido_reviews_verified">Vista previa: verifica la puntuación y la autorización de estas opiniones antes de mostrarlas al público.</p><div class="community-intro"><div><p class="eyebrow">Comunidad Kido</p><h2>La confianza también<br/>se construye piel a piel.</h2></div><div class="community-score"><strong>4,7</strong><span>★★★★★</span><small>Opiniones de nuestra comunidad</small></div></div><div class="community-grid"><blockquote class="review-featured"><span class="review-stars">★★★★★</span><p>“Me explicaron todo con claridad. Mi rutina por fin tiene sentido y sé para qué sirve cada producto.”</p><footer><strong>Amparo</strong><span>Tenerife</span></footer></blockquote><figure class="community-photo"><img src="/kido_editorial/static/src/img/9ca798db7615.webp" alt="Interior luminoso de Kido Essence"/><figcaption>Un espacio para probar, preguntar y elegir con calma.</figcaption></figure><blockquote><span class="review-stars">★★★★★</span><p>“Productos originales y recomendaciones que encajan conmigo.”</p><footer><strong>Marta</strong><span>La Laguna</span></footer></blockquote><blockquote><span class="review-stars">★★★★★</span><p>“Una tienda preciosa y un trato que da muchísima confianza.”</p><footer><strong>Pamela</strong><span>Santa Cruz</span></footer></blockquote></div><div class="community-note"><span>¿Ya formas parte de Kido?</span><a href="#club">Únete al Club y recibe la guía semanal →</a></div></section>
+<section class="discover-kido" data-snippet="s_kido_editorial" data-name="Kido discover-kido"><div class="discover-gallery"><img class="discover-exterior" src="/kido_editorial/static/src/img/fa0838823ad8.webp" alt="Fachada de Kido Essence en Santa Cruz de Tenerife"/><img class="discover-interior" src="/kido_editorial/static/src/img/a8ae57b2a692.webp" alt="Interior y selección de cosmética de Kido Essence"/><div class="discover-mark"><img src="/kido_editorial/static/src/img/311e7db6577d.webp" alt=""/><span>Santa Cruz<br/>de Tenerife</span></div></div><div class="discover-copy"><p class="eyebrow">También estamos cerca</p><h2>Descubre Kido<br/>en persona.</h2><p>Ven a probar texturas, conocer las fórmulas y encontrar productos que encajen de verdad en tu rutina.</p><div class="store-facts"><div><small>Encuéntranos</small><address>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</address></div><div><small>Horario</small><p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p></div></div><div class="discover-actions"><a class="pink" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Perez+Galdos+11+Santa+Cruz+de+Tenerife" target="_blank" rel="noopener noreferrer">Cómo llegar →</a><button class="outline-btn" data-open-quiz="">Preparar mi visita</button></div><div class="map-frame"><button type="button" class="map-consent" data-kido-map="1">Mostrar mapa (permite contenido externo)</button><iframe title="Mapa de Kido Essence" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-kido-src="https://www.google.com/maps?q=Calle%20Perez%20Galdos%2011%20Santa%20Cruz%20de%20Tenerife&amp;output=embed"/></div></div></section>
+<section class="faq section" id="faq" data-snippet="s_kido_editorial" data-name="Kido faq"><div class="faq-intro"><p class="eyebrow">Antes de empezar</p><h2>La cosmética coreana,<br/>sin complicaciones.</h2><p>Respuestas breves para tomar mejores decisiones y construir una rutina que puedas mantener.</p><button class="outline-btn" data-open-quiz="">Resolverlo con mi diagnóstico →</button></div><div class="faq-list"><details open=""><summary>¿Necesito una rutina de diez pasos?</summary><p>No. Una buena rutina empieza con limpieza, hidratación y protección solar. Los tratamientos se añaden solo cuando aportan algo a tu objetivo.</p></details><details><summary>¿Qué es la doble limpieza?</summary><p>Primero se retiran protector, maquillaje y grasa con una base oleosa; después se limpia con una fórmula acuosa suave. Por la mañana suele bastar una limpieza ligera.</p></details><details><summary>¿Puedo mezclar todos los activos?</summary><p>Conviene introducirlos poco a poco. Retinoides, exfoliantes y vitamina C requieren atención a la tolerancia de tu piel y una buena protección solar.</p></details><details><summary>¿Cuándo debería notar resultados?</summary><p>La hidratación y el confort pueden sentirse pronto. Manchas, textura y líneas necesitan constancia durante varias semanas.</p></details><details><summary>¿La piel grasa también necesita hidratación?</summary><p>Sí. La hidratación y la grasa son cosas distintas. Las texturas ligeras ayudan a mantener el equilibrio sin sobrecargar.</p></details></div></section>
+<section class="club" id="club" data-snippet="s_kido_editorial" data-name="Kido club"><div class="club-visual"><img src="/kido_editorial/static/src/img/0b25614c8686.webp" alt="Una carta, té y cosmética para el ritual semanal del Club Kido"/><span class="club-seal">K</span></div><div class="club-content"><p class="eyebrow">Una carta de Kido para tu piel</p><h2>Club Kido</h2><p class="club-lead">Un correo bonito y útil cada semana. Aprenderás a usar mejor tus productos, entenderás sus ingredientes y sabrás qué novedades merecen un lugar en tu rutina.</p><ol><li><span>01</span><div><strong>Guías que sí se aplican</strong><small>Orden, cantidad y combinaciones explicadas con claridad.</small></div></li><li><span>02</span><div><strong>Selección antes que ruido</strong><small>Novedades, lanzamientos y favoritos elegidos por Kido.</small></div></li><li><span>03</span><div><strong>Ventajas para la comunidad</strong><small>Acceso anticipado a encuentros y promociones puntuales.</small></div></li></ol><form action="/kido/club" method="post" data-kido-form="1"><input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/><input type="text" name="company_fax" tabindex="-1" autocomplete="off" class="kido-honeypot" aria-hidden="true"/><label for="club-email">Empieza con nuestra guía para escuchar tu piel</label><div><input id="club-email" type="email" placeholder="Tu correo electrónico" autocomplete="email" required="" name="email"/><button class="pink">Entrar en el Club →</button></div><small>Sin ruido. Puedes salir cuando quieras.</small><label class="terms-check"><input type="checkbox" name="consent" value="yes" required="required"/> Acepto recibir guías y novedades de Kido y he leído la <a href="/kido/privacidad">política de privacidad</a></label><input type="hidden" name="source" value="club"/></form></div></section>
+</main><footer class="site-footer"><div class="footer-brand"><img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/><p>Belleza coreana real, elegida con calma en Tenerife.</p></div><div><h4>Comprar</h4><a href="/shop?collection=novedades">Novedades</a><a href="/shop">Por necesidad</a><a href="/kido/rutinas">Rutinas</a><a href="/kido/marcas">Marcas</a></div><div><h4>Descubrir</h4><a href="/kido/sobre-kido">Sobre Kido</a><a href="/kido/guias">Guías</a><a href="/kido/contacto">Contacto</a><a href="/kido/envios">Envíos y devoluciones</a><button class="footer-link" data-cookie-settings="">Preferencias de cookies</button></div><div><h4>Información</h4><a href="/kido/aviso-legal">Aviso legal</a><a href="/kido/privacidad">Privacidad</a><a href="/kido/cookies">Cookies</a><a href="/kido/condiciones">Condiciones de compra</a></div><div><h4>Visítanos</h4><p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p><p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p></div></footer>
+<div class="quiz" id="quiz" aria-hidden="true"><div class="quiz-dialog" role="dialog" aria-modal="true" aria-labelledby="quiz-title"><button class="close" data-close-quiz="" aria-label="Cerrar diagnóstico">×</button><aside class="quiz-aside"><div class="quiz-brand"><span>KIDO ESSENCE</span><small>Tu rutina guiada</small></div><div class="quiz-aside-image"><img id="quiz-side-image" src="/kido_editorial/static/src/img/6f18a32a4498.webp" alt="Ritual de cuidado de la piel"/></div><h2>Vamos a escuchar<br/><em>lo que pide tu piel.</em></h2><p>Seis decisiones sencillas. Una selección que podrás revisar antes de añadirla.</p><ol id="quiz-steps"/><small>Orientación cosmética general. No sustituye un diagnóstico médico.</small></aside><div class="quiz-main"><div id="quiz-stage"/></div></div></div>
+<div class="product-modal" id="product-modal" aria-hidden="true"><div class="product-dialog" role="dialog" aria-modal="true" aria-label="Detalle del producto"><button class="close" data-close-product="" aria-label="Cerrar producto">×</button><div id="product-detail"/></div></div>
+<div class="search-panel" id="search-panel" aria-hidden="true"><div class="search-dialog"><button class="close" data-close-search="" aria-label="Cerrar búsqueda">×</button><p class="eyebrow">Encuentra tu siguiente paso</p><label for="product-search">¿Qué estás buscando?</label><input id="product-search" type="search" placeholder="Producto, marca, ingrediente o necesidad…" autocomplete="off"/><div class="search-suggestions"><button data-search-term="centella">Centella</button><button data-search-term="luminosidad">Luminosidad</button><button data-search-term="protector">Protector solar</button><button data-search-term="SKIN1004">SKIN1004</button></div><div id="search-results"/></div></div>
+<div class="drawer-backdrop" data-close-cart=""/><aside class="cart-drawer" id="cart-drawer" aria-hidden="true"><header><div><p class="eyebrow">Tu selección</p><h2>Tu cesta Kido</h2></div><button data-close-cart="" aria-label="Cerrar cesta">×</button></header><div class="shipping-progress"><div><span/></div><p id="shipping-message">Añade productos para comenzar.</p></div><div class="cart-lines" id="cart-lines"/><footer><div><span>Total</span><strong id="cart-total">0,00 €</strong></div><button class="pink" data-checkout="">Continuar al pago →</button><small>Pago y stock se confirmarán en Odoo.</small></footer></aside>
+<button class="guide-trigger" data-open-guide=""><span>Regalo</span>Guía Kido</button><div class="guide-popup" id="guide-popup" aria-hidden="true"><div class="guide-card"><button class="close" data-close-guide="" aria-label="Cerrar guía">×</button><img src="/kido_editorial/static/src/img/0b25614c8686.webp" alt="Guía semanal del Club Kido"/><div><p class="eyebrow">Un regalo para tu rutina</p><h2>Los tres pasos que tu piel sí necesita.</h2><p>Únete al Club Kido y recibe nuestra guía para ordenar tu rutina, además de consejos semanales y acceso anticipado a novedades.</p><form action="/kido/club" method="post" data-kido-form="1"><input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/><input type="text" name="company_fax" tabindex="-1" autocomplete="off" class="kido-honeypot" aria-hidden="true"/><input type="email" placeholder="Tu correo electrónico" required="" name="email"/><button class="pink">Recibir la guía →</button><label class="terms-check"><input type="checkbox" name="consent" value="yes" required="required"/> Acepto recibir guías y novedades de Kido y he leído la <a href="/kido/privacidad">política de privacidad</a></label><input type="hidden" name="source" value="guide"/></form><small>Sin ruido. Puedes salir cuando quieras.</small></div></div></div>
+<div class="toast" role="status" aria-live="polite"/><script src="/kido_editorial/static/src/js/home.js" defer="defer"/></div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_home" model="website.page">
+      <field name="name">index</field>
+      <field name="url">/kido/inicio</field>
+      <field name="view_id" ref="page_home_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_journal_view" name="Kido — page_journal">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site journal-page" data-kido-page="page_journal">
+        <t t-call="kido_editorial.assets"/>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span>
+          <span>Cosmética coreana auténtica · Tienda en Tenerife</span>
+          <a href="/kido/inicio#club">Club Kido</a>
+        </div>
+        <header>
+          <a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/contacto">Contacto</a>
+          </nav>
+          <div class="tools">
+            <a href="/shop">Buscar</a>
+            <a href="/shop/cart">Cesta <b data-cart-count="">0</b></a>
+          </div>
+        </header>
+        <main id="contenido" class="oe_structure">
+          <section class="subpage-hero journal-hero" data-snippet="s_kido_editorial" data-name="Kido subpage-hero">
+            <div>
+              <p class="eyebrow">Guías Kido</p>
+              <h1>Entender tu rutina<br/>también forma parte de ella.</h1>
+              <p>Explicaciones breves para comprar menos a ciegas y usar mejor lo que ya tienes.</p>
+            </div>
+          </section>
+          <section class="journal section" data-snippet="s_kido_editorial" data-name="Kido journal">
+            <article id="basicos">
+              <span>Guía 01 · 5 min</span>
+              <h2>La rutina básica que sí puedes mantener</h2>
+              <p>Empieza con limpieza suave, hidratación y protector solar. Añade un tratamiento solo cuando tengas un objetivo claro y puedas observar cómo responde tu piel.</p>
+              <ol>
+                <li><strong>Limpia</strong> sin buscar sensación de tirantez.</li>
+                <li><strong>Hidrata</strong> con una textura que te resulte cómoda.</li>
+                <li><strong>Protege</strong> cada mañana con una cantidad adecuada.</li>
+              </ol>
+              <a href="/shop">Construir la base →</a>
+            </article>
+            <article id="activos">
+              <span>Guía 02 · 6 min</span>
+              <h2>Cómo introducir un activo sin saturar tu piel</h2>
+              <p>Introduce un cambio cada vez, comienza con poca frecuencia y mantén estable el resto de la rutina. Si aparece irritación persistente, suspende el uso y consulta a un profesional.</p>
+              <a href="/shop?step=tratar">Ver tratamientos →</a>
+            </article>
+            <article id="doble-limpieza">
+              <span>Guía 03 · 4 min</span>
+              <h2>Cuándo tiene sentido la doble limpieza</h2>
+              <p>Puede resultar útil por la noche para retirar maquillaje, protector resistente y suciedad acumulada. Una primera fase oleosa y una segunda acuosa suave suelen ser suficientes.</p>
+              <a href="/shop?step=limpiar">Ver limpiadores →</a>
+            </article>
+            <article id="barrera">
+              <span>Guía 04 · 5 min</span>
+              <h2>Señales de que conviene simplificar</h2>
+              <p>Tirantez, escozor o rojez recurrente pueden indicar que estás combinando demasiados estímulos. Vuelve a una limpieza suave, hidratación y protección mientras observas la evolución.</p>
+              <a href="/shop?need=calma">Cuidar la barrera →</a>
+            </article>
+          </section>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop?collection=novedades">Novedades</a>
+            <a href="/shop">Por necesidad</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+          </div>
+          <div>
+            <h4>Descubrir</h4>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/contacto">Contacto</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+            <p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_journal" model="website.page">
+      <field name="name">journal</field>
+      <field name="url">/kido/guias</field>
+      <field name="view_id" ref="page_journal_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_legal_view" name="Kido — page_legal">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site legal-page" data-kido-page="page_legal">
+        <t t-call="kido_editorial.assets"/>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Información clara para comprar con tranquilidad</span>
+          <span>Kido Essence · Tenerife</span>
+          <a href="/shop">Volver a la tienda</a>
+        </div>
+        <header class="legal-header">
+          <a class="logo" href="/kido/inicio#inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </nav>
+          <div class="tools">
+            <a href="/kido/inicio">Inicio</a>
+          </div>
+        </header>
+        <main class="legal-main oe_structure">
+          <aside class="legal-nav">
+            <p class="eyebrow">Información</p>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </aside>
+          <article class="legal-content">
+            <p class="updated">Última actualización: 30 de septiembre de 2026</p>
+            <h1>Aviso legal</h1>
+            <p>Este documento regula el acceso y uso de la web de Kido Essence y sus servicios de información y comercio electrónico.</p>
+            <div class="pending" t-if="request.env.user.has_group(&quot;website.group_website_designer&quot;)"><strong>Datos pendientes antes de publicar:</strong> razón social o nombre completo del titular, NIF/CIF, domicilio fiscal, correo de privacidad y datos registrales si corresponden. El diseño está terminado; estos datos deben sustituirse al conectar la web definitiva.</div>
+            <h2>1. Titular del sitio</h2>
+            <p><strong>Nombre comercial:</strong> Kido Essence<br/><strong>Establecimiento:</strong> C. Pérez Galdós, 11, Santa Cruz de Tenerife<br/><strong>Titular, NIF/CIF, domicilio fiscal y contacto:</strong> pendientes de completar.</p>
+            <h2>2. Uso de la web</h2>
+            <p>La persona usuaria se compromete a navegar de forma lícita, respetar los derechos de terceros y no realizar acciones que puedan dañar, saturar o impedir el funcionamiento del sitio.</p>
+            <h2>3. Propiedad intelectual</h2>
+            <p>El diseño, textos, fotografías propias, logotipos y elementos de marca pertenecen a sus respectivos titulares. Las marcas de producto se muestran para identificar los artículos comercializados.</p>
+            <h2>4. Responsabilidad</h2>
+            <p>Kido Essence procura mantener la información actualizada. La disponibilidad, el precio y el stock definitivos se confirmarán durante el proceso de compra conectado con Odoo.</p>
+            <h2>5. Legislación aplicable</h2>
+            <p>Las relaciones derivadas del uso de este sitio se rigen por la normativa española y europea aplicable, sin perjuicio de los fueros imperativos de protección de consumidores.</p>
+          </article>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+          </div>
+          <div>
+            <h4>Ayuda</h4>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_legal" model="website.page">
+      <field name="name">legal</field>
+      <field name="url">/kido/aviso-legal</field>
+      <field name="view_id" ref="page_legal_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_privacy_view" name="Kido — page_privacy">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site legal-page" data-kido-page="page_privacy">
+        <t t-call="kido_editorial.assets"/>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Información clara para comprar con tranquilidad</span>
+          <span>Kido Essence · Tenerife</span>
+          <a href="/shop">Volver a la tienda</a>
+        </div>
+        <header class="legal-header">
+          <a class="logo" href="/kido/inicio#inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </nav>
+          <div class="tools">
+            <a href="/kido/inicio">Inicio</a>
+          </div>
+        </header>
+        <main class="legal-main oe_structure">
+          <aside class="legal-nav">
+            <p class="eyebrow">Información</p>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </aside>
+          <article class="legal-content">
+            <p class="updated">Última actualización: 30 de septiembre de 2026</p>
+            <h1>Privacidad</h1>
+            <p>Explicamos qué datos se recogen, para qué se usan y cómo ejercer tus derechos.</p>
+            <div class="pending" t-if="request.env.user.has_group(&quot;website.group_website_designer&quot;)"><strong>Datos pendientes antes de publicar:</strong> razón social o nombre completo del titular, NIF/CIF, domicilio fiscal, correo de privacidad y datos registrales si corresponden. El diseño está terminado; estos datos deben sustituirse al conectar la web definitiva.</div>
+            <h2>1. Datos y finalidades</h2>
+            <ul>
+              <li><strong>Compra y cuenta:</strong> gestionar pedidos, pagos, entregas, devoluciones y atención posventa.</li>
+              <li><strong>Cuestionario cosmético:</strong> mostrar una orientación de productos. No solicitamos ni tratamos datos clínicos.</li>
+              <li><strong>Club Kido:</strong> enviar guías, novedades y promociones cuando exista consentimiento.</li>
+              <li><strong>Navegación:</strong> mantener la seguridad y, si se autoriza, medir el uso de la web.</li>
+            </ul>
+            <h2>2. Base jurídica</h2>
+            <p>La ejecución de la compra, el cumplimiento de obligaciones legales, el consentimiento para comunicaciones y cookies no necesarias, y el interés legítimo en proteger el servicio cuando resulte aplicable.</p>
+            <h2>3. Conservación y destinatarios</h2>
+            <p>Los datos se conservan durante el tiempo necesario para la finalidad y los plazos legales. Podrán intervenir proveedores de alojamiento, pago, logística, correo y Odoo bajo las garantías correspondientes. La lista definitiva deberá completarse al conectar los servicios reales.</p>
+            <h2>4. Derechos</h2>
+            <p>Puedes solicitar acceso, rectificación, supresión, oposición, limitación y portabilidad, así como retirar tu consentimiento. El correo de ejercicio de derechos queda pendiente de completar. También puedes reclamar ante la Agencia Española de Protección de Datos.</p>
+            <h2>5. Menores</h2>
+            <p>La tienda no está dirigida a menores que no puedan contratar por sí mismos. No se solicitan datos de salud mediante el cuestionario.</p>
+          </article>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+          </div>
+          <div>
+            <h4>Ayuda</h4>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_privacy" model="website.page">
+      <field name="name">privacy</field>
+      <field name="url">/kido/privacidad</field>
+      <field name="view_id" ref="page_privacy_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_routines_view" name="Kido — page_routines">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site routines-page" data-kido-page="page_routines">
+        <t t-call="kido_editorial.assets"/>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span>
+          <span>Cosmética coreana auténtica · Tienda en Tenerife</span>
+          <a href="/kido/inicio#club">Club Kido</a>
+        </div>
+        <header>
+          <a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/contacto">Contacto</a>
+          </nav>
+          <div class="tools">
+            <a href="/shop">Buscar</a>
+            <a href="/shop/cart">Cesta <b data-cart-count="">0</b></a>
+          </div>
+        </header>
+        <main id="contenido" class="oe_structure">
+          <section class="subpage-hero routine-hero" data-snippet="s_kido_editorial" data-name="Kido subpage-hero">
+            <div>
+              <p class="eyebrow">Rutinas Kido</p>
+              <h1>Menos pasos.<br/>Más sentido.</h1>
+              <p>Empieza con una estructura coherente y cambia cualquier producto antes de comprar.</p>
+              <a class="pink" href="/kido/inicio?quiz=1">Descubrir mi rutina</a>
+            </div>
+            <img src="/kido_editorial/static/src/img/6f18a32a4498.webp" alt="Ritual de cuidado de la piel"/>
+          </section>
+          <section class="routine-library section" data-snippet="s_kido_editorial" data-name="Kido routine-library">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Cuatro puntos de partida</p>
+                <h2>Elige por lo que quieres cuidar.</h2>
+              </div>
+              <p>Cada propuesta combina limpieza, tratamiento, hidratación y protección. Todos los pasos son editables.</p>
+            </div>
+            <div id="routine-library"/>
+          </section>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop?collection=novedades">Novedades</a>
+            <a href="/shop">Por necesidad</a>
+            <a href="/kido/rutinas">Rutinas</a>
+            <a href="/kido/marcas">Marcas</a>
+          </div>
+          <div>
+            <h4>Descubrir</h4>
+            <a href="/kido/sobre-kido">Sobre Kido</a>
+            <a href="/kido/guias">Guías</a>
+            <a href="/kido/contacto">Contacto</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+            <p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p>
+          </div>
+        </footer>
+        <script src="/kido_editorial/static/src/js/routines.js" defer="defer"/>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_routines" model="website.page">
+      <field name="name">routines</field>
+      <field name="url">/kido/rutinas</field>
+      <field name="view_id" ref="page_routines_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_shipping_view" name="Kido — page_shipping">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site legal-page" data-kido-page="page_shipping">
+        <t t-call="kido_editorial.assets"/>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Información clara para comprar con tranquilidad</span>
+          <span>Kido Essence · Tenerife</span>
+          <a href="/shop">Volver a la tienda</a>
+        </div>
+        <header class="legal-header">
+          <a class="logo" href="/kido/inicio#inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </nav>
+          <div class="tools">
+            <a href="/kido/inicio">Inicio</a>
+          </div>
+        </header>
+        <main class="legal-main oe_structure">
+          <aside class="legal-nav">
+            <p class="eyebrow">Información</p>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </aside>
+          <article class="legal-content">
+            <p class="updated">Última actualización: 30 de septiembre de 2026</p>
+            <h1>Envíos y devoluciones</h1>
+            <p>Todo lo que necesitas saber antes y después de hacer tu pedido.</p>
+            <div class="pending" t-if="request.env.user.has_group(&quot;website.group_website_designer&quot;)"><strong>Validación comercial pendiente:</strong> confirmar islas de cobertura, transportista, plazos, coste base, umbral gratuito, correo de incidencias y dirección de devolución antes de publicar.</div>
+            <h2>Envíos en Canarias</h2>
+            <p>La propuesta actual ofrece envío gratuito a partir de 70 €. El coste y plazo exactos se mostrarán antes del pago cuando la tienda se conecte con Odoo.</p>
+            <h2>Recogida en tienda</h2>
+            <p>Podrás seleccionar recogida en C. Pérez Galdós, 11, Santa Cruz de Tenerife. Recibirás una confirmación cuando el pedido esté preparado.</p>
+            <h2>Devoluciones</h2>
+            <p>Dispones, con carácter general, de 14 días naturales desde la entrega para comunicar el desistimiento. Los gastos de devolución podrán corresponder a la persona compradora si se informa antes de la compra. Los cosméticos desprecintados podrán quedar excluidos por razones de higiene.</p>
+            <h2>Producto dañado o incorrecto</h2>
+            <p>Conserva el embalaje y contacta con atención al cliente indicando el número de pedido. Kido gestionará sin coste las soluciones legalmente previstas para productos defectuosos o no conformes.</p>
+            <h2>Preparar una devolución</h2>
+            <ol>
+              <li>Comunica el número de pedido y el artículo.</li>
+              <li>Espera la confirmación y las instrucciones.</li>
+              <li>Protege el producto y conserva el justificante de envío.</li>
+            </ol>
+          </article>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+          </div>
+          <div>
+            <h4>Ayuda</h4>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_shipping" model="website.page">
+      <field name="name">shipping</field>
+      <field name="url">/kido/envios</field>
+      <field name="view_id" ref="page_shipping_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="page_terms_view" name="Kido — page_terms">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site legal-page" data-kido-page="page_terms">
+        <t t-call="kido_editorial.assets"/>
+        <div class="notice">
+          <span t-field="website.kido_shipping_notice">Información clara para comprar con tranquilidad</span>
+          <span>Kido Essence · Tenerife</span>
+          <a href="/shop">Volver a la tienda</a>
+        </div>
+        <header class="legal-header">
+          <a class="logo" href="/kido/inicio#inicio">
+            <img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/>
+          </a>
+          <nav>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </nav>
+          <div class="tools">
+            <a href="/kido/inicio">Inicio</a>
+          </div>
+        </header>
+        <main class="legal-main oe_structure">
+          <aside class="legal-nav">
+            <p class="eyebrow">Información</p>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+          </aside>
+          <article class="legal-content">
+            <p class="updated">Última actualización: 30 de septiembre de 2026</p>
+            <h1>Condiciones de compra</h1>
+            <p>Estas condiciones se aplicarán a las compras realizadas en la tienda online de Kido Essence.</p>
+            <div class="pending" t-if="request.env.user.has_group(&quot;website.group_website_designer&quot;)"><strong>Datos pendientes antes de publicar:</strong> razón social o nombre completo del titular, NIF/CIF, domicilio fiscal, correo de privacidad y datos registrales si corresponden. El diseño está terminado; estos datos deben sustituirse al conectar la web definitiva.</div>
+            <h2>1. Proceso de compra</h2>
+            <p>La ficha mostrará características, precio total e impuestos. Antes de pagar podrás revisar productos, cantidades, gastos y forma de entrega. El pedido queda confirmado cuando Odoo emita la confirmación correspondiente.</p>
+            <h2>2. Precio, pago y disponibilidad</h2>
+            <p>Los precios se expresan en euros. Los métodos de pago, impuestos aplicables, territorios de venta y stock se confirmarán en la versión conectada a Odoo. Si un artículo no está disponible tras el pedido, se informará y devolverá el importe correspondiente.</p>
+            <h2>3. Entrega</h2>
+            <p>Las zonas, plazos y costes vigentes se mostrarán antes del pago. La referencia actual es envío gratuito en Canarias desde 70 €, pendiente de validación comercial definitiva.</p>
+            <h2>4. Desistimiento y devoluciones</h2>
+            <p>Con carácter general, las compras a distancia pueden desistirse dentro de los 14 días naturales desde la entrega. Por razones de salud e higiene, los cosméticos precintados que hayan sido abiertos pueden quedar excluidos cuando la normativa lo permita. Los productos defectuosos o no conformes conservan sus garantías legales.</p>
+            <h2>5. Atención e incidencias</h2>
+            <p>El canal de atención, correo y teléfono deberán completarse antes de publicar. Se facilitará un procedimiento sencillo para incidencias, cambios, devoluciones y reclamaciones.</p>
+            <h2>6. Comunicaciones</h2>
+            <p>La confirmación y documentación de la compra se enviarán a la dirección indicada por el cliente en un soporte duradero.</p>
+          </article>
+        </main>
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/>
+            <p>Belleza coreana real, elegida con calma en Tenerife.</p>
+          </div>
+          <div>
+            <h4>Comprar</h4>
+            <a href="/shop">Tienda</a>
+            <a href="/kido/inicio?quiz=1#inicio">Mi rutina</a>
+          </div>
+          <div>
+            <h4>Ayuda</h4>
+            <a href="/kido/envios">Envíos y devoluciones</a>
+            <button class="footer-link" data-cookie-settings="">Preferencias de cookies</button>
+          </div>
+          <div>
+            <h4>Información</h4>
+            <a href="/kido/aviso-legal">Aviso legal</a>
+            <a href="/kido/privacidad">Privacidad</a>
+            <a href="/kido/cookies">Cookies</a>
+            <a href="/kido/condiciones">Condiciones de compra</a>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p>
+          </div>
+        </footer>
+      </div>
+    </t>
+  </template>
+  <data noupdate="1">
+    <record id="page_terms" model="website.page">
+      <field name="name">terms</field>
+      <field name="url">/kido/condiciones</field>
+      <field name="view_id" ref="page_terms_view"/>
+      <field name="is_published" eval="False"/>
+      <field name="website_indexed" eval="False"/>
+    </record>
+  </data>
+  <template id="shop_page" name="Kido — shop">
+    <t t-call="website.layout">
+      <t t-set="no_header" t-value="True"/>
+      <t t-set="no_footer" t-value="True"/>
+      <div id="wrap" class="kido-site shop-page" data-kido-page="shop"><t t-call="kido_editorial.assets"/><div class="notice"><span t-field="website.kido_shipping_notice">Envío gratis en Canarias a partir de 70 €</span><span>Cosmética coreana auténtica · Tienda en Tenerife</span><a href="/kido/inicio#club">Club Kido</a></div>
+<header><a class="logo" href="/kido/inicio#inicio" aria-label="Volver al inicio de Kido Essence"><img src="/kido_editorial/static/src/img/d5e689846a08.webp" alt="Kido Essence"/></a><nav><a class="active" href="/shop">Tienda</a><a href="/shop?collection=novedades">Novedades</a><a href="/shop?need=hidratacion">Por necesidad</a><a href="/kido/inicio#rutina">Rutinas</a><a href="/kido/inicio#sets">Sets</a><a href="/kido/inicio#ingredientes">Ingredientes</a><a href="/kido/inicio#historia">Sobre Kido</a></nav><div class="tools"><a class="mobile-home" href="/kido/inicio#inicio">Inicio</a><button class="search" data-focus-search="">Buscar</button><a class="quiz-link" href="/kido/inicio?quiz=1#inicio">Mi rutina</a><button class="cart" data-shop-cart="">Cesta <b>0</b></button></div></header>
+<main>
+<section class="shop-hero"><img class="shop-hero-image" src="/kido_editorial/static/src/img/839cff75cd48.webp" alt="Selección de cosmética coreana en un paisaje de Tenerife"/><div class="shop-hero-copy"><p class="eyebrow">La selección Kido · original y con criterio</p><h1 id="shop-title">Encuentra lo que tu piel necesita.</h1><p id="shop-description">Explora por necesidad, paso, marca o ingrediente. Cada producto tiene un lugar claro en una rutina real.</p><form class="shop-search" role="search"><label for="shop-search">Buscar en la tienda</label><div><input id="shop-search" type="search" placeholder="Producto, marca o ingrediente…" autocomplete="off"/><button type="submit">Buscar →</button></div></form><div class="shop-hero-links"><a href="?need=calma">Piel sensible</a><a href="?need=hidratacion">Hidratación</a><a href="?collection=novedades">Novedades</a></div></div><span class="shop-hero-caption">Curado en Tenerife · Cosmética coreana auténtica</span></section>
+<section class="shop-shell"><aside class="shop-filters"><div class="filter-heading"><strong>Filtrar la selección</strong><button data-clear-filters="">Limpiar</button></div><details open=""><summary>Necesidad</summary><div><button data-filter="need" data-value="hidratacion">Hidratación</button><button data-filter="need" data-value="luminosidad">Luminosidad</button><button data-filter="need" data-value="calma">Calma y barrera</button><button data-filter="need" data-value="poros">Poros y textura</button><button data-filter="need" data-value="firmeza">Firmeza</button></div></details><details open=""><summary>Paso de la rutina</summary><div><button data-filter="step" data-value="limpiar">Limpiar</button><button data-filter="step" data-value="tratar">Tratar</button><button data-filter="step" data-value="hidratar">Hidratar</button><button data-filter="step" data-value="proteger">Proteger</button></div></details><details><summary>Marca</summary><div><button data-filter="brand" data-value="COSRX">COSRX</button><button data-filter="brand" data-value="MEDIPEEL">MEDIPEEL</button><button data-filter="brand" data-value="ANUA">ANUA</button><button data-filter="brand" data-value="MEDICUBE">MEDICUBE</button><button data-filter="brand" data-value="SKIN1004">SKIN1004</button><button data-filter="brand" data-value="PURITO">PURITO</button><button data-filter="brand" data-value="BIODANCE">BIODANCE</button><button data-filter="brand" data-value="TOCOBO">TOCOBO</button></div></details></aside><div class="shop-results"><div class="results-bar"><p><strong id="results-count">0</strong> productos</p><div id="active-filters"/><select id="shop-sort" aria-label="Ordenar productos"><option value="featured">Selección Kido</option><option value="price-asc">Precio: menor a mayor</option><option value="price-desc">Precio: mayor a menor</option><option value="name">Nombre</option></select></div><div class="shop-grid" id="shop-grid"/><div class="shop-empty" id="shop-empty" hidden=""><span>K</span><h2>Esta selección aún está tomando forma.</h2><p>Prueba con otro filtro o explora todo el catálogo disponible.</p><button data-clear-filters="">Ver todos los productos</button></div></div></section>
+<section class="shop-guidance"><div><h2>¿Demasiadas opciones?</h2><p>El diagnóstico Kido ordena una rutina según cómo se siente tu piel, tu prioridad y el tiempo que quieres dedicarle.</p></div><a class="pink" href="/kido/inicio?quiz=1#inicio">Crear mi rutina →</a></section>
+</main>
+<footer class="site-footer"><div class="footer-brand"><img src="/kido_editorial/static/src/img/238e4036c7cd.webp" alt="Kido Essence"/><p>Belleza coreana real, elegida con calma en Tenerife.</p></div><div><h4>Comprar</h4><a href="/shop?collection=novedades">Novedades</a><a href="/shop">Por necesidad</a><a href="/kido/rutinas">Rutinas</a><a href="/kido/marcas">Marcas</a></div><div><h4>Descubrir</h4><a href="/kido/sobre-kido">Sobre Kido</a><a href="/kido/guias">Guías</a><a href="/kido/contacto">Contacto</a><a href="/kido/envios">Envíos y devoluciones</a><button class="footer-link" data-cookie-settings="">Preferencias de cookies</button></div><div><h4>Información</h4><a href="/kido/aviso-legal">Aviso legal</a><a href="/kido/privacidad">Privacidad</a><a href="/kido/cookies">Cookies</a><a href="/kido/condiciones">Condiciones de compra</a></div><div><h4>Visítanos</h4><p>C. Pérez Galdós, 11<br/>Santa Cruz de Tenerife</p><p>L–V 10:00–14:30 · 16:00–20:30<br/>S 10:00–14:30</p></div></footer>
+<div class="product-modal" id="shop-product-modal" aria-hidden="true"><div class="product-dialog" role="dialog" aria-modal="true" aria-label="Detalle del producto"><button class="close" data-shop-close-product="" aria-label="Cerrar producto">×</button><div id="shop-product-detail"/></div></div>
+<div class="drawer-backdrop" data-shop-close-cart=""/><aside class="cart-drawer" id="shop-cart-drawer" aria-hidden="true"><header><div><p class="eyebrow">Tu selección</p><h2>Tu cesta Kido</h2></div><button data-shop-close-cart="" aria-label="Cerrar cesta">×</button></header><div class="shipping-progress"><div><span/></div><p id="shop-shipping-message">Añade productos para comenzar.</p></div><div class="cart-lines" id="shop-cart-lines"/><footer><div><span>Total</span><strong id="shop-cart-total">0,00 €</strong></div><button class="pink" data-shop-checkout="">Continuar al pago →</button><small>Pago y stock se confirmarán en Odoo.</small></footer></aside>
+<div class="toast" role="status" aria-live="polite"/><script src="/kido_editorial/static/src/js/shop.js" defer="defer"/></div>
+    </t>
+  </template>
+</odoo>

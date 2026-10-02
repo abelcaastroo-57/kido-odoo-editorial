@@ -1,0 +1,238 @@
+<odoo>
+  <data noupdate="1">
+    <record id="item_6173" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">The Vitamin C 23</field>
+      <field name="sequence">1</field>
+      <field name="local_key">6173</field>
+      <field name="brand">COSRX</field>
+      <field name="need">luminosidad</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">vitamina c</field>
+      <field name="badge">Novedad</field>
+      <field name="collection">novedades</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_6164" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Reedle Shot 700 Cica</field>
+      <field name="sequence">2</field>
+      <field name="local_key">6164</field>
+      <field name="brand">VT</field>
+      <field name="need">firmeza</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">centella</field>
+      <field name="badge">Tratamiento intensivo</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="False"/>
+    </record>
+    <record id="item_6124" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Oligo Hyaluronic Acid Sun</field>
+      <field name="sequence">3</field>
+      <field name="local_key">6124</field>
+      <field name="brand">THE LAB</field>
+      <field name="need">hidratacion</field>
+      <field name="step">proteger</field>
+      <field name="ingredient">hialuronico</field>
+      <field name="badge">Protección diaria</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_6122" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Black Rice Bakuchiol Eye Cream</field>
+      <field name="sequence">4</field>
+      <field name="local_key">6122</field>
+      <field name="brand">HARUHARU</field>
+      <field name="need">firmeza</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">arroz</field>
+      <field name="badge">Contorno de ojos</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="False"/>
+    </record>
+    <record id="item_6119" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Protective Lip Balm</field>
+      <field name="sequence">5</field>
+      <field name="local_key">6119</field>
+      <field name="brand">ABIB</field>
+      <field name="need">hidratacion</field>
+      <field name="step">hidratar</field>
+      <field name="ingredient">ceramidas</field>
+      <field name="badge">Cuidado diario</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="False"/>
+    </record>
+    <record id="item_6112" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Cica Cooling Sun Stick</field>
+      <field name="sequence">6</field>
+      <field name="local_key">6112</field>
+      <field name="brand">TOCOBO</field>
+      <field name="need">calma</field>
+      <field name="step">proteger</field>
+      <field name="ingredient">centella</field>
+      <field name="badge">Favorito</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_6109" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">AHA BHA Lemon Toner</field>
+      <field name="sequence">7</field>
+      <field name="local_key">6109</field>
+      <field name="brand">TOCOBO</field>
+      <field name="need">poros</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">aha bha</field>
+      <field name="badge">Poros y textura</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_6083" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Volume Tension Cream</field>
+      <field name="sequence">8</field>
+      <field name="local_key">6083</field>
+      <field name="brand">MEDIPEEL</field>
+      <field name="need">firmeza</field>
+      <field name="step">hidratar</field>
+      <field name="ingredient">peptidos</field>
+      <field name="badge">Firmeza</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_6081" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Glutathione White Ampoule</field>
+      <field name="sequence">9</field>
+      <field name="local_key">6081</field>
+      <field name="brand">MEDIPEEL</field>
+      <field name="need">luminosidad</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">glutation</field>
+      <field name="badge">Luminosidad</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_6077" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Red Lacto Collagen Cleansing Oil</field>
+      <field name="sequence">10</field>
+      <field name="local_key">6077</field>
+      <field name="brand">MEDIPEEL</field>
+      <field name="need">calma</field>
+      <field name="step">limpiar</field>
+      <field name="ingredient">colageno</field>
+      <field name="badge">Doble limpieza</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_6071" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Collagen Mask 4U</field>
+      <field name="sequence">11</field>
+      <field name="local_key">6071</field>
+      <field name="brand">BIODANCE</field>
+      <field name="need">firmeza</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">colageno</field>
+      <field name="badge">Más vendido</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="False"/>
+    </record>
+    <record id="item_6063" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">345 Relief Cream</field>
+      <field name="sequence">12</field>
+      <field name="local_key">6063</field>
+      <field name="brand">DR. ALTHEA</field>
+      <field name="need">calma</field>
+      <field name="step">hidratar</field>
+      <field name="ingredient">centella</field>
+      <field name="badge">Piel sensible</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_9001" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Madagascar Centella Light Cleansing Oil</field>
+      <field name="sequence">13</field>
+      <field name="local_key">9001</field>
+      <field name="brand">SKIN1004</field>
+      <field name="need">calma</field>
+      <field name="step">limpiar</field>
+      <field name="ingredient">centella</field>
+      <field name="badge">Original certificado</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_9002" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Madagascar Centella Toning Toner 210 ml</field>
+      <field name="sequence">14</field>
+      <field name="local_key">9002</field>
+      <field name="brand">SKIN1004</field>
+      <field name="need">luminosidad</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">centella</field>
+      <field name="badge">Tono y textura</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_9003" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Madagascar Centella Ampoule 100 ml</field>
+      <field name="sequence">15</field>
+      <field name="local_key">9003</field>
+      <field name="brand">SKIN1004</field>
+      <field name="need">calma</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">centella</field>
+      <field name="badge">Barrera y calma</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_9101" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">100 PDRN + Hyaluronic Acid 100</field>
+      <field name="sequence">16</field>
+      <field name="local_key">9101</field>
+      <field name="brand">ANUA</field>
+      <field name="need">hidratacion</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">pdrn</field>
+      <field name="badge">Hidratación</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_9102" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Exosome Cica Serum</field>
+      <field name="sequence">17</field>
+      <field name="local_key">9102</field>
+      <field name="brand">MEDICUBE</field>
+      <field name="need">calma</field>
+      <field name="step">tratar</field>
+      <field name="ingredient">centella</field>
+      <field name="badge">Barrera y calma</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+    <record id="item_9103" model="kido.editorial.item">
+      <field name="website_id" ref="website.default_website"/>
+      <field name="name">Mighty Bamboo Panthenol Cleanser</field>
+      <field name="sequence">18</field>
+      <field name="local_key">9103</field>
+      <field name="brand">PURITO</field>
+      <field name="need">calma</field>
+      <field name="step">limpiar</field>
+      <field name="ingredient">bambu</field>
+      <field name="badge">Limpieza suave</field>
+      <field name="collection">favoritos</field>
+      <field name="routine_eligible" eval="True"/>
+    </record>
+  </data>
+</odoo>

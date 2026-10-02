@@ -1,0 +1,21 @@
+{
+    'name': 'Kido Essence — Editorial',
+    'version': '17.0.1.0.0',
+    'category': 'Website/Website',
+    'summary': 'Diseño editorial, rutina guiada y comercio electrónico nativo',
+    'license': 'LGPL-3',
+    'depends': ['website_sale', 'website_sale_stock', 'website_sale_delivery', 'crm', 'mass_mailing'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/backend.xml',
+        'data/editorial.xml',
+        'data/questions.xml',
+        'data/club_email.xml',
+        'views/pages.xml',
+        'views/commerce.xml',
+        'views/snippets.xml',
+    ],
+    'assets': {},
+    'installable': True,
+    'application': False,
+}

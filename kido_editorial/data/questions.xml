@@ -1,0 +1,342 @@
+<odoo>
+  <data noupdate="1">
+    <record id="question_feel" model="kido.quiz.question">
+      <field name="name">Después de limpiar tu rostro, ¿cómo suele sentirse tu piel?</field>
+      <field name="key">feel</field>
+      <field name="sequence">1</field>
+      <field name="kicker">Primero, tu punto de partida</field>
+      <field name="hint">Piensa en cómo se comporta sin crema, no solo en cómo se ve.</field>
+    </record>
+    <record id="option_feel_dry" model="kido.quiz.option">
+      <field name="question_id" ref="question_feel"/>
+      <field name="sequence">1</field>
+      <field name="value">dry</field>
+      <field name="label">Tirante o incómoda</field>
+      <field name="description">Pide crema enseguida</field>
+      <field name="icon">◯</field>
+    </record>
+    <record id="weight_feel_dry_hidratacion" model="kido.quiz.weight">
+      <field name="option_id" ref="option_feel_dry"/>
+      <field name="need">hidratacion</field>
+      <field name="weight">3</field>
+    </record>
+    <record id="option_feel_balanced" model="kido.quiz.option">
+      <field name="question_id" ref="question_feel"/>
+      <field name="sequence">2</field>
+      <field name="value">balanced</field>
+      <field name="label">Cómoda y equilibrada</field>
+      <field name="description">Sin tirantez ni brillo marcado</field>
+      <field name="icon">◇</field>
+    </record>
+    <record id="option_feel_oily" model="kido.quiz.option">
+      <field name="question_id" ref="question_feel"/>
+      <field name="sequence">3</field>
+      <field name="value">oily</field>
+      <field name="label">Con brillo bastante pronto</field>
+      <field name="description">Sobre todo en la zona T</field>
+      <field name="icon">✦</field>
+    </record>
+    <record id="weight_feel_oily_poros" model="kido.quiz.weight">
+      <field name="option_id" ref="option_feel_oily"/>
+      <field name="need">poros</field>
+      <field name="weight">2</field>
+    </record>
+    <record id="option_feel_combination" model="kido.quiz.option">
+      <field name="question_id" ref="question_feel"/>
+      <field name="sequence">4</field>
+      <field name="value">combination</field>
+      <field name="label">Mixta, depende de la zona</field>
+      <field name="description">Brillo central y mejillas más secas</field>
+      <field name="icon">◐</field>
+    </record>
+    <record id="weight_feel_combination_poros" model="kido.quiz.weight">
+      <field name="option_id" ref="option_feel_combination"/>
+      <field name="need">poros</field>
+      <field name="weight">2</field>
+    </record>
+    <record id="option_feel_unsure" model="kido.quiz.option">
+      <field name="question_id" ref="question_feel"/>
+      <field name="sequence">5</field>
+      <field name="value">unsure</field>
+      <field name="label">No sabría decirlo</field>
+      <field name="description">Lo averiguamos juntas</field>
+      <field name="icon">?</field>
+    </record>
+    <record id="question_reaction" model="kido.quiz.question">
+      <field name="name">¿Con cuál de estas situaciones te identificas más?</field>
+      <field name="key">reaction</field>
+      <field name="sequence">2</field>
+      <field name="kicker">Cómo se comunica tu piel</field>
+      <field name="hint">Elige la que aparezca con mayor frecuencia.</field>
+    </record>
+    <record id="option_reaction_redness" model="kido.quiz.option">
+      <field name="question_id" ref="question_reaction"/>
+      <field name="sequence">1</field>
+      <field name="value">redness</field>
+      <field name="label">Se enrojece o reacciona</field>
+      <field name="description">Con cambios o productos nuevos</field>
+      <field name="icon">≈</field>
+    </record>
+    <record id="weight_reaction_redness_calma" model="kido.quiz.weight">
+      <field name="option_id" ref="option_reaction_redness"/>
+      <field name="need">calma</field>
+      <field name="weight">4</field>
+    </record>
+    <record id="option_reaction_dehydrated" model="kido.quiz.option">
+      <field name="question_id" ref="question_reaction"/>
+      <field name="sequence">2</field>
+      <field name="value">dehydrated</field>
+      <field name="label">Le falta agua</field>
+      <field name="description">Tirantez o aspecto apagado</field>
+      <field name="icon">⌁</field>
+    </record>
+    <record id="weight_reaction_dehydrated_hidratacion" model="kido.quiz.weight">
+      <field name="option_id" ref="option_reaction_dehydrated"/>
+      <field name="need">hidratacion</field>
+      <field name="weight">3</field>
+    </record>
+    <record id="option_reaction_breakouts" model="kido.quiz.option">
+      <field name="question_id" ref="question_reaction"/>
+      <field name="sequence">3</field>
+      <field name="value">breakouts</field>
+      <field name="label">Granitos o poros visibles</field>
+      <field name="description">Imperfecciones y textura</field>
+      <field name="icon">·</field>
+    </record>
+    <record id="weight_reaction_breakouts_poros" model="kido.quiz.weight">
+      <field name="option_id" ref="option_reaction_breakouts"/>
+      <field name="need">poros</field>
+      <field name="weight">3</field>
+    </record>
+    <record id="option_reaction_spots" model="kido.quiz.option">
+      <field name="question_id" ref="question_reaction"/>
+      <field name="sequence">4</field>
+      <field name="value">spots</field>
+      <field name="label">Manchas o tono desigual</field>
+      <field name="description">Marcas y falta de luminosidad</field>
+      <field name="icon">☼</field>
+    </record>
+    <record id="weight_reaction_spots_luminosidad" model="kido.quiz.weight">
+      <field name="option_id" ref="option_reaction_spots"/>
+      <field name="need">luminosidad</field>
+      <field name="weight">3</field>
+    </record>
+    <record id="option_reaction_lines" model="kido.quiz.option">
+      <field name="question_id" ref="question_reaction"/>
+      <field name="sequence">5</field>
+      <field name="value">lines</field>
+      <field name="label">Pérdida de firmeza</field>
+      <field name="description">Líneas, elasticidad o prevención</field>
+      <field name="icon">⌇</field>
+    </record>
+    <record id="weight_reaction_lines_firmeza" model="kido.quiz.weight">
+      <field name="option_id" ref="option_reaction_lines"/>
+      <field name="need">firmeza</field>
+      <field name="weight">3</field>
+    </record>
+    <record id="option_reaction_none" model="kido.quiz.option">
+      <field name="question_id" ref="question_reaction"/>
+      <field name="sequence">6</field>
+      <field name="value">none</field>
+      <field name="label">Ninguna destaca</field>
+      <field name="description">Quiero cuidar y mantener</field>
+      <field name="icon">✓</field>
+    </record>
+    <record id="question_sensitivity" model="kido.quiz.question">
+      <field name="name">Cuando pruebas algo nuevo, tu piel…</field>
+      <field name="key">sensitivity</field>
+      <field name="sequence">3</field>
+      <field name="kicker">Tu nivel de tolerancia</field>
+      <field name="hint">Así decidimos la intensidad de los tratamientos.</field>
+    </record>
+    <record id="option_sensitivity_high" model="kido.quiz.option">
+      <field name="question_id" ref="question_sensitivity"/>
+      <field name="sequence">1</field>
+      <field name="value">high</field>
+      <field name="label">Reacciona con facilidad</field>
+      <field name="description">Picor, rojez o ardor</field>
+      <field name="icon">○</field>
+    </record>
+    <record id="weight_sensitivity_high_calma" model="kido.quiz.weight">
+      <field name="option_id" ref="option_sensitivity_high"/>
+      <field name="need">calma</field>
+      <field name="weight">4</field>
+    </record>
+    <record id="option_sensitivity_medium" model="kido.quiz.option">
+      <field name="question_id" ref="question_sensitivity"/>
+      <field name="sequence">2</field>
+      <field name="value">medium</field>
+      <field name="label">A veces protesta</field>
+      <field name="description">Depende del activo o la temporada</field>
+      <field name="icon">◒</field>
+    </record>
+    <record id="weight_sensitivity_medium_calma" model="kido.quiz.weight">
+      <field name="option_id" ref="option_sensitivity_medium"/>
+      <field name="need">calma</field>
+      <field name="weight">1</field>
+    </record>
+    <record id="option_sensitivity_low" model="kido.quiz.option">
+      <field name="question_id" ref="question_sensitivity"/>
+      <field name="sequence">3</field>
+      <field name="value">low</field>
+      <field name="label">Suele tolerarlo bien</field>
+      <field name="description">Pocas veces presenta molestias</field>
+      <field name="icon">●</field>
+    </record>
+    <record id="option_sensitivity_unknown" model="kido.quiz.option">
+      <field name="question_id" ref="question_sensitivity"/>
+      <field name="sequence">4</field>
+      <field name="value">unknown</field>
+      <field name="label">Todavía no lo sé</field>
+      <field name="description">Prefiero empezar de forma suave</field>
+      <field name="icon">?</field>
+    </record>
+    <record id="weight_sensitivity_unknown_calma" model="kido.quiz.weight">
+      <field name="option_id" ref="option_sensitivity_unknown"/>
+      <field name="need">calma</field>
+      <field name="weight">1</field>
+    </record>
+    <record id="question_concern" model="kido.quiz.question">
+      <field name="name">Si pudieras mejorar una cosa primero, ¿cuál sería?</field>
+      <field name="key">concern</field>
+      <field name="sequence">4</field>
+      <field name="kicker">El objetivo principal</field>
+      <field name="hint">Tu rutina cubrirá más necesidades, pero esta marcará la prioridad.</field>
+    </record>
+    <record id="option_concern_hidratacion" model="kido.quiz.option">
+      <field name="question_id" ref="question_concern"/>
+      <field name="sequence">1</field>
+      <field name="value">hidratacion</field>
+      <field name="label">Hidratación y confort</field>
+      <field name="description">Flexibilidad y menos tirantez</field>
+      <field name="icon">⌁</field>
+    </record>
+    <record id="weight_concern_hidratacion_hidratacion" model="kido.quiz.weight">
+      <field name="option_id" ref="option_concern_hidratacion"/>
+      <field name="need">hidratacion</field>
+      <field name="weight">5</field>
+    </record>
+    <record id="option_concern_luminosidad" model="kido.quiz.option">
+      <field name="question_id" ref="question_concern"/>
+      <field name="sequence">2</field>
+      <field name="value">luminosidad</field>
+      <field name="label">Luminosidad y manchas</field>
+      <field name="description">Tono uniforme y descansado</field>
+      <field name="icon">☼</field>
+    </record>
+    <record id="weight_concern_luminosidad_luminosidad" model="kido.quiz.weight">
+      <field name="option_id" ref="option_concern_luminosidad"/>
+      <field name="need">luminosidad</field>
+      <field name="weight">5</field>
+    </record>
+    <record id="option_concern_poros" model="kido.quiz.option">
+      <field name="question_id" ref="question_concern"/>
+      <field name="sequence">3</field>
+      <field name="value">poros</field>
+      <field name="label">Poros, brillo y granitos</field>
+      <field name="description">Equilibrio y textura más lisa</field>
+      <field name="icon">◌</field>
+    </record>
+    <record id="weight_concern_poros_poros" model="kido.quiz.weight">
+      <field name="option_id" ref="option_concern_poros"/>
+      <field name="need">poros</field>
+      <field name="weight">5</field>
+    </record>
+    <record id="option_concern_calma" model="kido.quiz.option">
+      <field name="question_id" ref="question_concern"/>
+      <field name="sequence">4</field>
+      <field name="value">calma</field>
+      <field name="label">Calma y barrera</field>
+      <field name="description">Menos rojez y mayor tolerancia</field>
+      <field name="icon">≈</field>
+    </record>
+    <record id="weight_concern_calma_calma" model="kido.quiz.weight">
+      <field name="option_id" ref="option_concern_calma"/>
+      <field name="need">calma</field>
+      <field name="weight">5</field>
+    </record>
+    <record id="option_concern_firmeza" model="kido.quiz.option">
+      <field name="question_id" ref="question_concern"/>
+      <field name="sequence">5</field>
+      <field name="value">firmeza</field>
+      <field name="label">Firmeza y líneas</field>
+      <field name="description">Elasticidad y prevención</field>
+      <field name="icon">◇</field>
+    </record>
+    <record id="weight_concern_firmeza_firmeza" model="kido.quiz.weight">
+      <field name="option_id" ref="option_concern_firmeza"/>
+      <field name="need">firmeza</field>
+      <field name="weight">5</field>
+    </record>
+    <record id="question_experience" model="kido.quiz.question">
+      <field name="name">¿Qué rutina tienes ahora mismo?</field>
+      <field name="key">experience</field>
+      <field name="sequence">5</field>
+      <field name="kicker">Tu relación con el skincare</field>
+      <field name="hint">Buscamos la que realmente vas a mantener.</field>
+    </record>
+    <record id="option_experience_new" model="kido.quiz.option">
+      <field name="question_id" ref="question_experience"/>
+      <field name="sequence">1</field>
+      <field name="value">new</field>
+      <field name="label">Estoy empezando</field>
+      <field name="description">Quiero entender lo esencial</field>
+      <field name="icon">01</field>
+    </record>
+    <record id="option_experience_basic" model="kido.quiz.option">
+      <field name="question_id" ref="question_experience"/>
+      <field name="sequence">2</field>
+      <field name="value">basic</field>
+      <field name="label">Tengo una base sencilla</field>
+      <field name="description">Limpieza, crema y protector</field>
+      <field name="icon">02</field>
+    </record>
+    <record id="option_experience_advanced" model="kido.quiz.option">
+      <field name="question_id" ref="question_experience"/>
+      <field name="sequence">3</field>
+      <field name="value">advanced</field>
+      <field name="label">Ya utilizo tratamientos</field>
+      <field name="description">Conozco activos y varias capas</field>
+      <field name="icon">03</field>
+    </record>
+    <record id="option_experience_reset" model="kido.quiz.option">
+      <field name="question_id" ref="question_experience"/>
+      <field name="sequence">4</field>
+      <field name="value">reset</field>
+      <field name="label">Tengo demasiadas cosas</field>
+      <field name="description">Necesito ordenar y simplificar</field>
+      <field name="icon">↺</field>
+    </record>
+    <record id="question_depth" model="kido.quiz.question">
+      <field name="name">¿Cuánto tiempo quieres dedicarte?</field>
+      <field name="key">depth</field>
+      <field name="sequence">6</field>
+      <field name="kicker">La rutina que encaja contigo</field>
+      <field name="hint">Podrás cambiar o eliminar cualquier producto antes de comprar.</field>
+    </record>
+    <record id="option_depth_essential" model="kido.quiz.option">
+      <field name="question_id" ref="question_depth"/>
+      <field name="sequence">1</field>
+      <field name="value">essential</field>
+      <field name="label">Lo esencial</field>
+      <field name="description">3 pasos · rápido y constante</field>
+      <field name="icon">03</field>
+    </record>
+    <record id="option_depth_balanced" model="kido.quiz.option">
+      <field name="question_id" ref="question_depth"/>
+      <field name="sequence">2</field>
+      <field name="value">balanced</field>
+      <field name="label">Un ritual equilibrado</field>
+      <field name="description">4 pasos · tratamiento incluido</field>
+      <field name="icon">04</field>
+    </record>
+    <record id="option_depth_complete" model="kido.quiz.option">
+      <field name="question_id" ref="question_depth"/>
+      <field name="sequence">3</field>
+      <field name="value">complete</field>
+      <field name="label">Disfrutar el proceso</field>
+      <field name="description">5 pasos · cuidado completo</field>
+      <field name="icon">05</field>
+    </record>
+  </data>
+</odoo>
