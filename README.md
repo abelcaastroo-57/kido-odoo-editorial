@@ -1,6 +1,6 @@
 # Kido Editorial — Odoo 17
 
-Private deployment repository containing only the `kido_editorial` addon.
+Deployment repository containing only the `kido_editorial` addon.
 No database, credentials, customer exports, inventory counts or payment keys.
 
 Target: staging container 4502, `kidoessence-pre.binhex.cloud`.
